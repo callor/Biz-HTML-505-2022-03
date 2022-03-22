@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>식단표</title>
+<style>
+table {
+	border-collapse: collapse;
+	border:1px solid #222; 
+	width:500px;
+}
+th, td {
+	border: 1px solid #b0b0b0;
+	padding: 20px 10px 5px; /* 태그안쪽여백 */
+}
+</style>
+</head>
+<body>
+<table>
+	<caption>주간 식단표</caption>
+	<thead>
+		<tr><th>시간/요일</th>
+			<th>월요일</th>
+			<th>화요일</th>
+			<th>수요일</th>
+			<th>목요일</th>
+			<th>금요일</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>아침</th>
+			<td>샐러드</td>
+			<td>된장국</td>
+			<td rowspan='2'>생선조림</td>
+			<td>샌드위치</td>
+			<td>현미밥</td>
+		</tr>
+		<tr>
+			<th>점심</th>
+			<td colspan='2'>카레</td>
+			<td>냉면</td>
+			<td>햄버거</td>
+		</tr>
+		<tr>
+			<th>저녁</th>
+			<td>해물찜</td>
+			<td>등갈비</td>
+			<td>쌀국수</td>
+			<td>피자</td>
+			<td>치킨</td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+</html>

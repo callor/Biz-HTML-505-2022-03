@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습정리</title>
+<style>
+table { border-collapse: collapse; width:600px; }
+th, td { border:1px solid #222;  padding: 10px; }
+a { text-decoration: none; color:inherit; }
+</style>
+</head>
+<body>
+<h2>현재 페이지 구성</h2>
+<ul>
+	<li><a href='#image'>이미지</a></li>
+	<li><a href='#video'>비디오</a></li>
+	<li><a href='#menu'>식단표</a></li>
+</ul>
+<h2>화면연결하기</h2>
+<ul>
+	<li><a target='_blank' href='http://localhost/web0317/html/image.html'>이미지화면</a></li>
+	<li><a target='_blank' href='image.html'>이미지화면</a></li>
+	<li><a target='_blank' href='./video.html'>비디오화면</a></li>
+	<li><a target='_blank' href='../ex01.html'>식단표화면</a></li>
+</ul>
+
+
+<table id='menu'>
+	<caption>식단표</caption>
+	<thead>
+		<tr>
+			<th>시간/요일</th>
+			<th>월요일</th>
+			<th>화요일</th>
+			<th>수요일</th>
+			<th>목요일</th>
+			<th>금요일</th>
+		</tr>
+	 </thead>
+ 	<tbody>
+ 		<tr>
+ 			<th>아침</th>
+ 			<td>샐러드</td>
+ 			<td>된장국</td>
+ 			<td rowspan='2'>생선조림</td>
+ 			<td>샌드위치</td>
+ 			<td>현미밥</td>
+ 		</tr>
+ 		<tr>
+ 			<th>점심</th>
+ 			<td colspan='2'>카레</td>
+ 			<td>냉면</td>
+ 			<td>햄버거</td>
+ 		</tr>
+ 		<tr>
+ 			<th>저녁</th>
+ 			<td>해물찜</td>
+ 			<td>등갈비</td>
+ 			<td>쌀국수</td>
+ 			<td>피자</td>
+ 			<td>치킨</td>
+ 		</tr>
+ 	</tbody>
+	
+</table>
+
+<br>
+<img id='image' src='../images/lemonade.jpg' width='400px' >
+<br>
+<video id='video' src='../media/Seoul.mp4' controls width='400px'></video>
+
+</body>
+</html>
+
+
+
+
+

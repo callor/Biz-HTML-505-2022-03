@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<style>
+table { border-collapse: collapse }
+th, td { border: 1px solid #222; padding: 5px }
+/* table th, table td */
+</style>
+</head>
+<body>
+<input type='button' value='닫기' onclick='window.close()'>
+<h2>회원가입</h2>
+<a href='../index.html'>홈으로</a>
+<a href='http://localhost:80/web0322'>홈으로</a>
+
+<!-- 
+입력항목의 값(데이터)을 전송하려면  form태그에 선언한다
+각 입력항목은 name 속성을 가져야 한다
+: 입력항목의 데이터가 name속성의 파라미터명으로 전송되므로 
+
+action 속성을 지정하지 않으면 자기자신페이지를 요청(request)한다
+전송된 파라미터가 주소창에 노출되지 않게 하려면  method 를 post 로 지정한다
+method: 데이터전송방식
+-->
+<form method='post' action='../index.html'>
+<table>
+	<colgroup>
+		<col width='150px'>
+		<col width='350px'>
+	</colgroup>
+	<caption>회원가입정보</caption>
+	<tr>
+		<th>아이디</th>
+		<td><input type='text' name='id'></td>
+	</tr>
+	<tr>
+		<th>비밀번호</th>
+		<td><input type='password' name='password'></td>
+	</tr>
+	<tr>
+		<th>비밀번호확인</th>
+		<td><input type='password' name='password_ck'></td>
+	</tr>
+	<tr>
+		<th>이름</th>
+		<td><input type='text' name='name'></td>
+	</tr>
+	<tr>
+		<th>성별</th>
+		<td>
+			<input type='radio' name='gender' value='남' id='male'><label for='male'>남</label>
+			<label><input type='radio' name='gender' checked value='여'>여</label>
+		</td>
+	</tr>
+	<tr>
+		<th>전화번호</th>
+		<td><select name='phone'>
+				<option>02</option>
+				<option>032</option>
+				<option>031</option>
+				<option>062</option>
+				<option>061</option>
+			</select> -
+			<input type='text' name='phone' style='width:60px'> -
+			<input type='text' name='phone' style='width:60px'>
+		</td>
+	</tr>
+	<tr>
+		<th>SMS수신여부</th>
+		<td><label><input type='checkbox' name='sms' checked>수신함</label>
+		</td>
+	</tr>
+	<tr>
+		<th>이메일</th>
+		<td>
+			<input type='text' name='email'>@
+			<select name='service'>
+				<option value='naver.com'>네이버</option>
+				<option value='daum.net'>다음</option>
+				<option value='gmail.com'>구글</option>
+				<option selected>직접입력</option>
+			</select>
+			<!-- 
+			email=abc&service=naver.com
+			'abc'+'@'+ 'naver.com'
+			 -->
+		</td>
+	</tr>
+	<tr>
+		<th>사진등록</th>
+		<td><input type='file' name='profile'> </td>
+	</tr>
+	<tr>
+		<th colspan='2'>
+			<input type='submit' value='회원가입'>
+		</th>
+	</tr>
+</table>
+</form>
+
+</body>
+</html>
+
+
+

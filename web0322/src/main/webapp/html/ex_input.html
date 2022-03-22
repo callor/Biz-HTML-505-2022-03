@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+h3 { color: blue } /* 내부스타일 */
+</style>
+<!-- 외부스타일 -->
+<link rel="stylesheet" href='../css/common.css'>
+</head>
+<body>
+<!-- 인라인 스타일 -->
+<a style='color:inherit; text-decoration:none' href='http://localhost:80/web0322'>홈으로</a>
+<h3>추가적인 input 태그</h3>
+<table>
+	<tr><th>number 태그</th>
+		<td>숫자만 입력할 수 있는 입력 태그</td>
+	</tr>
+	<tr><th>date 태그</th>
+		<td>날짜를 선택할 수 있는 달력 태그</td>
+	</tr>
+	<tr><th>month 태그</th>
+		<td>월을 선택할 수 있는 달력 태그</td>
+	</tr>
+	<tr><th>time 태그</th>
+		<td>시각을 선택할 수 있는 시계 태그</td>
+	</tr>
+	<tr><th>button 태그</th>
+		<td>아무런 기능이 없는 버튼형태의 태그</td>
+	</tr>
+</table>
+<hr>
+<!-- 
+명명() : 함수
+명명된 함수를 호출한다
+window.open( url )
+window.open( url, 창이름, 창속성 )
+창이름: 창이름, target의 형태를 지정할 수 있다.
+창이름에 _self, _blank 를 지정하면  target이 적용되고
+다른 형태의 이름을 지정하면 target 은  _blank(기본)이 적용된다. 
+ -->
+ 
+<input type='button' 
+		onclick='window.open("http://naver.com", "new_window")' 
+				value='새창으로 네이버열기' ><br> 
+<input type='button' 
+		onclick='window.open("http://google.com", "new_window")' 
+				value='새창으로 구글열기' ><br> 
+<input type='button' 
+		onclick='window.open("http://hrd.go.kr", "new_window")' 
+				value='새창으로 HRD열기' ><br> 
+<hr> 
+<input type='button' value='팝업열기' 
+	onclick='window.open("../member/join.html", "google", "width=500px, height=400px")' > <br>
+		 
+<input type='button' onclick='alert("네이버열기")' 
+				value='알림메시지 띄우기' ><br>
+<input type='button' 
+		onclick='window.open("http://naver.com", "_self")' 
+				value='새창으로 네이버열기' ><br>
+<input type='button'
+		onclick='window.open("../member/join.html")' 
+		value='회원가입화면 열기'><br>
+
+<input type='time' value='16:24'><br>
+<input type='month' value='2022-03'><br>
+<input type='date' value='2022-03-22'><br>
+<input type='number' min='1' max='10' value='1' step='2'><br>
+</body>
+</html>
+
+
+
+
+
+
+
