@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* 500*2 + 10*4 : 1040 */
+	#container { width:1040px; margin: 50px auto; }
+	section { float:left; width:500px; height:250px;
+		margin:10px; padding:20px; 
+		border:1px solid #ccc;
+		box-sizing: border-box;
+	}
+	footer {
+		clear:left; width:100%; height:	100px;	
+		background-color: #000; color: #fff;		
+	}
+	footer h5 { line-height: 100px; text-align: center; }
+	
+	/*  
+	.content { float:left; width:500px; height:250px;
+		margin:10px; padding:20px; 
+		border:1px solid #ccc;
+		box-sizing: border-box;
+	}
+	#footer {
+		clear:left; width:100%; height:	100px;	
+		background-color: #000; color: #fff;		
+	}
+	#footer h5 { line-height: 100px; text-align: center; }
+	*/
+ 	p { line-height: 28px; }
+ 	header { width:100%; height: 150px; line-height: 150px; 
+ 		border-bottom: 1px solid #ccc;  } 
+ 	header nav ul { list-style:none }
+ 	header nav ul li { display:inline-block; width:70px;}
+ 	header nav { width: 1040px; margin: 0 auto; }
+</style>   
+</head>
+<body>
+	<!-- 
+	사전 뉴스 증권 부동산 지도 를 
+	네비게이션태그를 사용한 시맨틱태그로 표현해본다
+	 -->
+	<header>
+		<nav>
+			<ul>
+				<li>사전</li>
+				<li>뉴스</li>
+				<li>증권</li>
+				<li>부동산</li>
+				<li>지도</li>
+			</ul>
+		</nav>
+	</header>
+	
+<div id='container'>	
+	<h1>강아지 용품 준비하기</h1>
+	<section>
+		<h3>강아지 집</h3>
+		<p>강아지가 편히 쉴 수 있는 포근한 집이 필요합니다. 
+강아지의 집은 강아지가 다 큰 후에도 계속 쓸 수 있는 집으로 구입하세요.
+집을 구입하실 때는 박음질이 잘 되어 있는지, 세탁이 간편한 제품인지 꼭 확인하시고 고르시는 것이 좋습니다.
+		</p>
+	</section>
+	<section>
+	</section>
+	<section>
+	</section>
+	<section>
+	</section>
+	<footer>
+		<h5>boxmodel실습</h5>
+	</footer>
+</div>
+<!--  
+1. 레이아웃은  content가 4개, footer 가 있는  container 태그를 만든다
+2. h1 으로 제목을 작성한다
+3. content 를 왼쪽 플로팅한다
+   너비 500px.  높이 250px, 마진 10px , 패딩 20px 을 지정하고
+   테두리는 1px 실선 #ccc 으로 그린다.
+4. footer 는 왼쪽플로팅을 해제한다
+5. content 내부에 설명글은  p 태그로 작성하고 줄간(line-height)을 24px 로 지정
+
+-->
+</body>
+</html>

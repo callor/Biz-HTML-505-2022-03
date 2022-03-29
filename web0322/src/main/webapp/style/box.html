@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>박스모델</title>
+
+<link rel="stylesheet" href='../css/common.css'>
+<style>
+	div { margin: 20px 0; padding: 10px 0; }
+	input[type=text] { 
+		padding: 5px 10px; border:1px solid #ccc; 
+	}
+/* 	input:focus { outline: none; } */
+ 	input:focus { outline: none; border:1px solid blue; } 
+	div label, div a { margin: 0 20px }
+	a { text-decoration: none; color: inherit; }
+	
+	div.inline ul li { display:inline }
+	div.inline-block ul li { display:inline-block }
+	
+	div.inline a, div.inline-block a { margin:0 }
+	div.inline ul li, div.inline-block ul li {
+		width: 100px;
+		border-bottom: 1px solid #222;	
+		/* border-top, border-right, border-bottom, border-left */
+		padding: 10px 0;
+		margin-right: 30px;
+		/* margin-top, margin-right, margin-bottom, margin-left */
+	}
+	
+.box-sizing {
+	width: 300px;
+	border: 1px solid #333;
+	margin: 20px auto;
+	padding: 50px;
+}
+.box-sizing h3 { margin-top: 0 } 
+.box-sizing input {
+	width: 100%; 
+	height: 35px; 
+	border: 1px solid #ccc;
+	padding: 0; 
+	box-sizing: border-box;
+}
+.box-sizing li { margin: 10px 0 }  /* li들 간의 상하 간격 */
+
+.content-box { box-sizing: content-box }
+.border-box { box-sizing: border-box }
+
+div.moon {
+	padding: 0; width:150px; height: 150px;
+	background-color: #fbff05; 
+	margin: 20px;
+	border-radius: 50%;
+	box-shadow: 0 0 60px 30px ;  /* 가로 세로 흐림정도 번짐정도 */
+}
+div.shadow { 
+	width:200px; 
+	height:100px; 
+	background-color:green;
+	margin: 150px 
+}
+div.out { box-shadow: 5px 5px 4px 2px #0a5900; }
+div.in{ box-shadow: 5px 5px 8px inset #0a5900; }
+
+a.btn {
+	margin-top: 50px;
+	border: solid 1px #3367d6;
+	padding: 3px 15px;
+	border-radius: 5px;
+	background-color: #3367d6;
+	color: #fff;
+	box-shadow: 2px 2px 3px #022d72;
+} 
+</style>
+</head>
+<body>
+<div style='height:50px'></div>
+<a class='btn' href='index.html'>스타일 홈으로</a>
+
+<h3>border(테두리)관련 속성</h3>
+<div class='shadow out'></div>
+<div class='shadow in'></div>
+<div class='moon'></div>
+
+<p>border: 1px solid #ccc</p>
+<p>border-width: 1px</p>
+<p>border-style: solid</p>
+<p>border-color: #ccc</p>
+<p>border-radius: 3px - 모서리를 둥글게 할 때</p>
+<p>box-shadow: 그림자효과내기</p>
+
+<hr>
+<h3>box-sizing관련 : content-box와 border-box 비교하기</h3>
+<!-- 
+content-box: 컨텐츠영역만 width, height에 해당하고 
+             padding, border 는 포함되지 않는다
+border-box: 컨텐츠 영역 + padding + border 까지가  
+             width, height에 해당             
+-->
+<div class='box-sizing content-box'>
+	<h3>회원 로그인</h3>
+	<ul>
+		<li><input type='text' autofocus placeholder='아이디'></li>
+		<li><input type='password' placeholder='비밀번호'></li>
+		<li><input type='button' value='로그인'></li>
+	</ul>
+</div>
+<!-- 
+input 태그에 autofocus 를 지정해 
+화면들어갔을때 해당 태그에 커서가 있게 한다. 
+ -->
+<div class='box-sizing border-box'>
+	<h3>회원 로그인</h3>
+	<ul>
+		<li><input type='text' placeholder='아이디'></li>
+		<li><input type='password' placeholder='비밀번호'></li>
+		<li><input type='button' value='로그인'></li>
+	</ul>
+</div>
+
+
+<hr>
+<h3>inline 과  inline-block 비교하기</h3>
+<!--  
+inline 은 width, height 가 적용되지 않고 컨텐츠만큼의 영역을 차지함
+inline-block 은 width, height 가 적용되어짐
+
+-->
+<div class='inline'>
+	<ul>
+		<li><a href='#'>로그인</a></li>
+		<li><a href='#'>회원가입</a></li>
+		<li><a href='#'>장바구니</a></li>
+		<li><a href='#'>주문조회</a></li>
+	</ul>
+</div>
+<div class='inline-block'>
+	<ul>
+		<li><a href='#'>로그인</a></li>
+		<li><a href='#'>회원가입</a></li>
+		<li><a href='#'>장바구니</a></li>
+		<li><a href='#'>주문조회</a></li>
+	</ul>
+</div>
+
+<hr>
+
+<h3>박스모델 인라인 속성</h3>
+<div>
+	<input type='text'>
+	<label><input type='radio'>선택</label>
+	<a href='#'>페이지 연결</a>
+	<a href='#'>페이지 연결</a>
+</div>
+
+
+
+<h2>css boxmodel 이란?</h2>
+<p>css 에서 html 요소를 마치 상자처럼 취급하는 것</p>
+<h3>박스모델 블록의 속성</h3>
+<ul>
+	<li>content: 텍스트나 이미지</li>
+	<li>border: 테두리</li>
+	<li>padding: 안쪽 여백으로 border와 content 사이의 영역</li>
+	<li>margin: 바깥쪽 여백으로 태그와 태그 사이의 영역</li>
+</ul>
+
+<hr>
+<h3>박스모델</h3>
+<p>박스모델이란 웹 문서내용알 박스 형태로 표현하는 것을 말한다</p>
+<p>나열형태에 따라 블록과 인라인 이 있다</p>
+<p>블록: 태그 하난가 너비 100%로 한 줄을 모두 차지하여<br> 
+블록태그 옆에 다른 요소가 위치할 수 없다</p>
+<p>인라인: 너비가 태그의 컨텐츠만큼에 해당하여<br>
+한 줄에 인라인 요소 여러 개를 위치하게 할 수 있다
+</p>
+
+<table>
+	<tr><th>블록(block)</th>
+		<td>div, p, form, hr, table, ul, ol, h1~h6</td>
+	</tr>
+	<tr><th>인라인(inline)</th>
+		<td>span, strong, label, a : inline<br>
+			input, textarea, button, img : inline-block
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>
+
+
+
+
+
+

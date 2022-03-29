@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/* #first ul {
+	list-style:none;
+} */
+/* 
+ul li  의  display를  
+inline 이나 inline-block 으로 지정하면
+ul의 list-style-type이 적용되지 않는다
+*/
+#first ul li {
+	display: inline-block;
+	padding: 10px 0;
+	width: 100px;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin: 0 10px;
+}
+#second div {
+	border: 1px solid #ccc;
+	float: left; /* float를 지정하면 실제 컨텐츠만큼의 너비를 차지 */
+	padding: 5px 20px;
+	margin-right: 20px;
+}
+#first { clear:left; margin: 50px 0; }
+#first ul { padding: 0 }
+/* #first ul li:first-child { display:none } */
+#first ul li:first-child { visibility:visible }
+/* visible/hidden */
+</style>
+</head>
+<body>
+
+<div id='second'>
+	<div>메뉴1</div>
+	<div>메뉴2</div>
+	<div>메뉴3</div>
+	<div>메뉴4</div>
+</div>
+<div id='first'>
+	<ul>
+		<li>메뉴1</li>
+		<li>메뉴2</li>
+		<li>메뉴3</li>
+		<li>메뉴4</li>
+	</ul>
+</div>
+
+
+</body>
+</html>

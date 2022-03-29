@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>텍스트관련 실습문제</title>
+<style>
+div#first { border:1px solid #ccc; padding:0 10px; }
+ul { list-style: none; }
+ul li { line-height: 2; } 
+/* 폰트의 기본크기는 16px 이므로 2배라고 할때 32px로 지정해도 됨  */
+li span { color:#ad3000; font-weight: bold; font-size: 20px  }
+
+div.second {	
+	width: 300px;
+	height: 70px;
+	background-color: #4458f2;
+}
+div.second h2 {
+	line-height: 70px;
+	text-align: center;
+	text-shadow: 3px 2px 5px #020b52;
+	/* color: #fff; */
+}
+table { /* border:1px solid black; */ 
+	border-collapse: collapse;
+	caption-side: bottom;
+}
+th, td { border: 1px solid black; padding:10px; }
+.heading { background-color: #eee;}
+</style>
+</head>
+<body>
+
+<div id='first'>
+	<h2>최신 웹 디자인 트렌드</h2>
+	<ul>
+		<li><span>반응형 웹 디자인</span> - 다양한 화면 크기에 최적화하다.</li>
+		<li><span>플랫 디자인</span> - 입체에서 평면으로</li>
+		<li><span>풀 스크린 배경</span> - 콘텐츠에 집중</li>
+		<li><span>원 페이지 사이트</span> - 한 페이지에 모든 내용을 담다</li>
+		<li><span>패럴랙스 스크롤링</span> - 동적인 효과로 강한 인상을!</li>
+		<li><span>웹 폰트</span> - 웹 타이포그래피를 받쳐 주는 기술</li>
+	</ul>
+</div>
+  
+<!-- 1번
+1. 순서없는 목록으로 만든다
+2. 각 항목의 줄 간격을 글자 크기의 2배로 지정한다.
+3. 각 항목에서 진하게 표시된 부분의 글자색을 #ad30000 으로 지정한다.
+ -->
+<hr>
+
+<div class='second'>
+	<h2>웹 개발 기초</h2>
+</div>
+<!-- 
+2번
+1. 글자색과 배경색은 원하는 색상으로 적절히 지정한다.
+2. 텍스트를 기준으로 오른쪽 아래, 가로 3px,  세로 2px, 번짐 5px 로 텍스트에 그림자효과를 지정한다
+3. 그림자색상은 글자색과 배경색에 어울리게 적절히 지정한다.
+-->
+<hr>
+
+<table>
+	<colgroup>
+		<col class='heading'>
+		<col>
+		<col>
+	</colgroup>
+	<caption>2019 국민 독서실태</caption>
+	<thead class='heading'>
+		<tr><th>구분</th><th>성인</th><th>독서자</th>	</tr>
+	</thead>
+	<tbody>
+		<tr><th class='heading'>종이책</th><td>6.1권</td><td>11.8권</td></tr>
+		<tr><th>전자책</th><td>1.2권</td><td>7.1권</td></tr>
+		<tr><th>오디오불</th><td>0.2권</td><td>5.5권</td></tr>
+	</tbody>
+</table>
+<!--  
+3번
+1. 표와 셀 테두리에 1px solid black  을 지정한다
+2.설명글  caption은 표 아래쪽에 표시한다
+3.각 섹에는 padding: 10px 을 적용한다
+4.배경색을 #eee로 지정하는 클래스 선택자 .heading 을 정의한 후 첫번째 행, 첫번째 열에 적용한다.
+-->
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>프론트엔드 개발자 지원서</title>
+<style>
+@font-face {
+    font-family: 'Headline R';
+    src: url('../css/fonts/HeadlineR-HM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+ul { list-style: none; }
+label { width: 60px; display:inline-block; 
+color: blue !important;  }
+li { line-height: 30px; }
+body > div { border:1px solid #ccc; padding: 30px; 
+/* background-color: #0330fc; */
+/* background-color: rgba(82, 12, 120, 0.5); */
+ background-color: #0330fc;
+ opacity: 0.5; /*투명도*/
+ }
+/* div > * { color: red } */
+h2 { font-family: 'Headline R', '휴먼편지체', 'san-serif' }
+</style>
+</head>
+<body>
+<div>
+	<h2>프론트엔드 개발자 지원서</h2>
+	<p>HTML, CSS, 자바스트립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다
+	<hr>
+	<h4>개인정보</h4>
+	<ul>
+		<li><label style='color:red' >이름</label> <input type='text' 
+					placeholder='공백없이 입력하세요'></li>
+		<li><label>연락처</label> <input type='tel'></li>
+	</ul>
+	<h4>지원분야</h4>
+	<ul>
+		<li><input type='radio' name='field'>웹 퍼블리싱</li>
+		<li><input type='radio' name='field'>웹 애플리케이션 개발</li>
+		<li><input type='radio' name='field'>개발 환경 개선</li>
+	</ul>
+	<h4>지원동기</h4>
+	<textarea rows="5" cols="60" 
+			placeholder='지원 동기를 간략히..'></textarea>
+	<div>
+	<input type='submit' value='접수하기'>
+	<input type='reset' value='다시쓰기'>
+	</div>		
+</div>
+</body>
+</html>

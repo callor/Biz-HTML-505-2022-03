@@ -7,6 +7,7 @@
 table { border-collapse: collapse }
 th, td { border: 1px solid #222; padding: 5px }
 /* table th, table td */
+input[name=phone] { width: 60px }
 </style>
 </head>
 <body>
@@ -23,8 +24,13 @@ th, td { border: 1px solid #222; padding: 5px }
 action 속성을 지정하지 않으면 자기자신페이지를 요청(request)한다
 전송된 파라미터가 주소창에 노출되지 않게 하려면  method 를 post 로 지정한다
 method: 데이터전송방식
+
+form 태그내에 file 태그를 전송하는 경우
+: 1. form태그 전송방식이  post이어야 한다: method='post'
+  2. 파일데이터전송가능 형태를 지정: enctype='multipart/form-data' 
 -->
-<form method='post' action='../index.html'>
+<form method='post' action='../index.html' 
+				enctype='multipart/form-data'>
 <table>
 	<colgroup>
 		<col width='150px'>
@@ -33,7 +39,7 @@ method: 데이터전송방식
 	<caption>회원가입정보</caption>
 	<tr>
 		<th>아이디</th>
-		<td><input type='text' name='id'></td>
+		<td><input type='text' name='id' autofocus></td>
 	</tr>
 	<tr>
 		<th>비밀번호</th>
@@ -59,12 +65,12 @@ method: 데이터전송방식
 		<td><select name='phone'>
 				<option>02</option>
 				<option>032</option>
-				<option>031</option>
+				<option selected>031</option>
 				<option>062</option>
 				<option>061</option>
 			</select> -
-			<input type='text' name='phone' style='width:60px'> -
-			<input type='text' name='phone' style='width:60px'>
+			<input type='text' name='phone'> -
+			<input type='text' name='phone'>
 		</td>
 	</tr>
 	<tr>
@@ -90,11 +96,17 @@ method: 데이터전송방식
 	</tr>
 	<tr>
 		<th>사진등록</th>
-		<td><input type='file' name='profile'> </td>
+		<td><label><input type='file' style='display:none' 
+							name='profile' >
+				   <img src='../images/logo.png' 
+				   			width='80px; height: 15px'
+				   			style='border:1px solid'>
+			</label></td>
 	</tr>
 	<tr>
 		<th colspan='2'>
 			<input type='submit' value='회원가입'>
+			<input type='reset' value='초기화'>
 		</th>
 	</tr>
 </table>
