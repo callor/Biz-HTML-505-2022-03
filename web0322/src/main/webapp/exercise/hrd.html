@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NCS소개</title>
+<style>
+body { margin:0 }/* body의 기본 마진을 없앤다 */
+a { text-decoration: none; color:initial; }
+ul { list-style:none; }
+header { 
+	height: 80px; border-bottom: 1px solid #aaa; 
+	line-height: 80px; }
+ul { margin: 0; padding: 0; } 
+/* ul이 갖는 기본 마진,패딩 없애기 */	
+header nav ul li { 
+	display:inline; /* margin-right: 30px; */
+	font-size: 20px; font-weight: bold;  
+}
+/* header nav ul li:not(:last-child) { margin-right: 30px; } */
+header nav ul li:not(:first-child) { margin-left: 30px; }
+
+/* 네비게이션메뉴가 동일간 간격으로 보여지도록 오른쪽마진을 지정 */
+header nav, section, footer div{ width: 1200px; margin:0 auto; }
+article { margin: 40px auto; }
+article p { line-height: 26px; }
+
+table p { margin: 0; line-height: 22px; } /*table 내부의  p태그는 기본 마진 없애기*/
+article table { border-collapse: collapse; width:100%;  }
+article table thead tr { 
+	background-color: #eee;  border-bottom: 2px solid #777;	 
+} 
+/* article table tr td, article table tr th { padding: 15px 0; } */
+article table tr > * { padding: 15px 0; } 
+/* tr의 자식요소로  td, th 가 있으니 tr의 모든자식에 적용 */
+article table tbody tr { border-bottom: 1px solid #ccc; }
+
+/* tbody tr 의 첫번째 td 의 텍스트를 가운데 정렬 */
+article table tbody tr td:first-child { text-align: center; }
+
+/* article table tr td:first-child
+, article table tr th:first-child { 
+	border-right:1px solid #ccc; 
+} */
+article table tr > *:first-child { 
+	border-right:1px solid #ccc; 
+}
+article table td:last-child { 
+	/* padding-left: 20px */
+	text-indent: 20px; 
+}
+
+footer { font-size:12px; /* text-align: center;  */
+	border-top:1px solid #ccc; padding: 20px 0;
+	}
+footer p { margin: 0; line-height:18px;  }
+footer span { color: red; }
+
+section h1 { text-align: center; }
+section > p { text-align: center; font-size: 18px; }
+/*
+article ul { list-style:none; }
+article ul li { 
+	display: inline-block; 
+	border:1px solid #ddd;
+	height: 50px;  line-height: 50px; width: 50%;
+	box-sizing: border-box;  text-align: center;	
+} 
+article ul li.on { 
+	border:2px solid #666; 
+	border-bottom: 1px solid #fff; 
+}
+*/
+
+article ul { list-style:none; height:50px; }
+article ul li {
+	float:left;
+	border:1px solid #ddd;
+	height: 50px;  line-height: 50px; width: 50%;
+	box-sizing: border-box;  text-align: center;
+}
+article ul li.on { 
+	border:2px solid #666; 
+	border-bottom: 1px solid #fff; 
+}
+
+table#ncs tfoot tr { border-bottom: 1px solid #ccc; }
+table#ncs tfoot th { background-color: #eee; }
+table#ncs tr > *:first-child { border-right:none; }
+/*
+table#ncs tr td { text-align: center; }
+table#ncs tr td:first-child { text-align: left; }
+*/
+table#ncs tr td { text-align: left; }
+table#ncs tr td:not(:first-child) { text-align: center;  }
+/* 제외의 가상클래스 :not() */
+table#ncs tr td:first-child { text-indent: 20px;}
+
+h4 + p { color: red; }
+/* 선택자1 ~ 선택자2 
+: 선택자1 의 형제요소로 선택자1 뒤로 나오는 모든 선택자2 */
+h4 ~ p { background-color: yellow }
+
+/* p태그의 부모입장에서 볼때 자식요소 2번째 자식요소인 p태그 */
+p:nth-child(3) { font-weight:bold  }
+</style>
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+			<li><a href=''>훈련과정</a></li>
+			<li><a href=''>지원제도</a></li>
+			<li><a href=''>일자리·직업정보</a></li>
+			<li><a href=''>지식정보센터</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section>
+	<h1>NCS분류체계</h1>
+	<p>NCS(국가직무능력표준)에 대한 정보를 자세히 확인하실 수 있습니다.</p>
+	<article>
+		<ul>
+			<li class='on'>NCS소개</li>
+			<li>분류체계</li>
+		</ul>
+	</article>
+		
+	<h2>소개</h2>
+	<article>
+		<h4>국가직무능력표준(NCS)란?</h4>
+		<p>국가직무능력표준(NCS, National Competency Standards)는 산업현장에서 직무를 수행하기 위해 요구되는 지식·기술·소양 등의 내용을 국가가 산업 부문별·수준별로 체계화한 것으로 , 산업현장의 직무를 성공적으로 수행하기 위해 필요한 능력(지식,기술,태도)을 국가적 차원에서 표준화한 것을 의미 합니다.</p>
+	</article>
+	<article>
+		<h4>분류체계</h4>
+		<p>국가직무능력표준의 분류체계는 직무의 유형을 중심으로 국가직무능력표준의 단계적 구성을 나타내는 것으로, 국가직무능력표준 개발의 전체적인 로드맵을 제시</p>
+		<p>한국고용직업분류(KECO : Korean Employment Classification of Occupations)를 중심으로, 한국표준직업분류, 한국표준산업분류 등을 참고하여 분류하였으며, ‘대분류(24) → 중분류(81) → 소분류(261) → 세분류(1032)개’의 순으로 구성</p>
+	</article>
+	<article>
+		<h4>세부 분류기준</h4>	
+		<table>
+			<colgroup><col width='300px' ><col>			
+			</colgroup>
+			<thead>
+				<tr><th>분류</th><th>분류기준</th></tr>				
+			</thead>
+			<tbody>
+				<tr>
+					<td>대분류</td>
+					<td>직능유형이 유사한 분야(한국고용직업분류 참조)</td>
+				</tr>
+				<tr>
+					<td>중분류</td>
+					<td><p>대분류 내에서 직능유형이 유사한 분야</p>
+						<p>대분류 내에서 산업이 유사한 분야</p>
+						<p>대분류 내에서 노동시장이 독립적으로 형성되거나 경력개발경로가 유사한 분야</p>
+						<p>중분류 수준에서 산업별 인적자원개발협의체(SC)가 존재하는 분야</p>
+					</td>
+				</tr>
+				<tr>
+					<td>소분류</td>
+					<td><p>중분류 내에서 직능유형이 유사한 분야</p>
+						<p>소분류 수준에서 산업별인적자원개발협의체(SC)가 존재하는 분야</p>
+					</td>
+				</tr>
+				<tr>
+					<td>세분류</td>
+					<td><p>소분류 내에서 직능유형이 유사한 분야</p>
+						<p>한국고용직업분류의 직업 중 대표 직무</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>	
+	</article>
+	
+	<article>
+		<h4>NCS분류체계</h4>
+		<table id='ncs'>
+			<colgroup>
+				<col  >
+				<col width='250px'>
+				<col width='250px'>
+				<col width='250px'>
+			</colgroup>
+			<thead>
+				<tr>
+					<th>대분류</th>
+					<th>중분류</th>
+					<th>소분류</th>
+					<th>세분류</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>01. 사업관리</td>
+					<td>1</td>
+					<td>2</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>02. 경영·회계·사무</td>
+					<td>1</td>
+					<td>2</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>03. 금융·보험</td>
+					<td>1</td>
+					<td>2</td>
+					<td>5</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr><th>계</th>
+					<td>82</td>
+					<td>267</td>
+					<td>1049</td>
+				</tr>
+			</tfoot>
+		</table>
+	</article>
+	
+</section>
+
+<footer>
+	<div>
+		<p>HRD-Net은 <span>통신판매중개자</span>이며, 통신판매의 당사자가 아닙니다. 상품(훈련), 상품(훈련)정보, 거래에 관한 의무과 책임은 판매자(훈련기관)에게 있습니다.</p>
+		<address>(27740) 충청북도 음성군 맹동면 태정로 6 (두성리, 한국고용정보원) HRD-Net 시스템관련문의 : 1577-7114(유료), 제도/자격문의 : 고용노동부1350(유료)</address>
+		<p>Copyright ⓒ 2016. <span>Human Resources Development Service Of Korea. All Rights Reserved.</span></p>
+	</div>
+</footer>
+
+</body>
+</html>
