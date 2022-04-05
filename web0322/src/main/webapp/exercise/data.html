@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body { margin: 0 }
+ul { margin:0; padding:0; list-style:none; }
+a { text-decoration: none; color: inherit; }
+ 
+header { 
+	min-width: 1200px;
+	background-color: #0670b9;
+	font-size: 18px; font-weight: bold; color: #fff;
+}
+header ul { display: inline-block; margin: 30px 0 20px; }
+header ul li { float:left; padding-bottom: 10px; }
+header nav, section, aside div, footer div { width:1200px; margin: 0 auto; } 
+header ul li:not(:last-child) { margin-right: 100px; }
+
+header ul li.on { color: yellow; border-bottom: 3px solid #fff;  }
+
+h2 + p { 
+	padding-bottom: 15px; 
+	border-bottom: 2px solid #666; 
+}
+
+#tab ul { height: 50px; line-height: 50px; 
+	box-sizing: border-box; 
+	border-bottom: 1px solid #0670b9; }
+#tab ul li { font-weight: bold; 
+	height: 50px; box-sizing: border-box;
+	float:left; width: 200px; text-align: center;
+	border: 1px solid #aaa;  border-bottom: none;
+}
+#tab ul li:not(:first-child) { border-left:none; }
+#tab ul li.on {
+	border: 1px solid #0670b9;
+	border-bottom: 1px solid #fff;
+	color: #0670b9; 
+}
+
+#search { height: 36px; margin-top: 30px; }
+#search div { float:right; }
+#search a, #search input { vertical-align: middle; } 
+#search a { border: 1px solid #666; 
+	height: 34px; line-height:34px; display: inline-block;
+	padding: 0 10px;
+}	
+#search input { 
+	height: 36px;
+	border:1px solid #666; 
+	box-sizing:border-box;
+	padding: 0;
+}
+#search input[type=text] { padding-left: 10px; }
+#search input[type=button] { background-color:#0670b9;
+	 border:1px solid #0670b9; color: #fff;
+	 padding: 0 20px;
+} 
+#search a.on { 
+	border: 1px solid #0670b9; color:#0670b9;
+	text-decoration: underline;
+}
+
+#tb-list ul { height: 50px; }
+#tb-list li:first-child { float:left }
+#tb-list li:last-child { float:right }
+article { margin-top: 30px; }
+#tb-list li a:not(:first-child) { 
+	border-left: 1px solid; padding: 0 10px; 
+} 
+/* hexa값 16진수 : 0~9 a b c d e f */
+#tb-list table { border-collapse: collapse; }
+#tb-list thead tr { background-color: #eee;
+	border-top: 2px solid #666; 
+}
+#tb-list td, #tb-list th { padding: 15px 0; }
+#tb-list tbody td:not(:nth-child(2)) 
+{ text-align: center; }
+#tb-list tbody tr { border-top: 1px solid #aaa; }
+#tb-list tbody tr:last-child { border-bottom: 1px solid #aaa;  }
+#tb-list tbody td:nth-child(2) { font-weight: bold; }
+#tb-list tbody td:nth-child(2):hover 
+{ color: #0670b9; text-decoration: underline;  cursor: pointer; }
+
+#paging { 
+	line-height: 36px; 
+	text-align: center;  
+	margin: 20px 0; 
+}
+#paging a { min-width: 36px; height:36px; display: inline-block; }
+#paging a.on { border: 1px solid #0670b9; color:#0670b9; }
+#paging a.arrow { border: 1px solid #aaa;}
+#paging a:hover {  border: 1px solid #0670b9; }
+
+aside {
+	 font-size: 14px; border-top:1px solid #ccc;
+	 padding: 15px 0;  margin: 30px 0;	  
+}
+aside ul li { float: left; }
+aside ul li:not(:last-child){ margin-right: 50px; } 
+aside ul li:nth-child(2) { color:  #0670b9; }
+aside ul li a:hover { text-decoration: underline;}
+
+footer { font-size:12px }
+address { font: inherit; }
+footer p { margin-top: 5px; }
+
+#popup-background {
+	width: 100%; height: 100%;
+	position: fixed;
+	left: 0;	top: 0;
+	/* background-color: rgba(0,0,0, 0.3); */
+	background-color: #000;
+	opacity: 0.3;	
+	display: none;	
+}
+#popup {
+	display: none;
+	width: 400px; height: 350px;
+	position: fixed;
+	left: 50%; top:50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid #333;
+}
+#popup div { height: 300px; }
+#popup img { width:100%; height:100%;}
+#popup a { display: inline-block; text-align: center;
+	width: 100%; height: 50px;  line-height: 50px;
+	background-color: #fff;	
+}
+</style>
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js'></script>
+
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+			<li><a href=''>데이터찾기</a></li>
+			<li><a href=''>국가데이터맵</a></li>
+			<li><a href=''>데이터요청</a></li>
+			<li><a href=''>데이터활용</a></li>
+			<li class='on'><a href=''>정보공유</a></li>
+			<li><a href=''>이용안내</a></li>
+		</ul>
+	</nav>
+</header>
+<section>
+	<h2>개발자 네트워크</h2>
+	<p>개발자들 간의 각종 문제해결 방안, 개발 노하우, 데이터 가공 노하우 등을 자유롭게 참여하여 의견을 나눌 수 있는 공간입니다.</p>
+	<article id='tab'>
+		<ul>
+			<li class='on'>개발 노하우</li>
+			<li>OPEN API 활용 문의</li>
+			<li>유용한 사이트</li>
+		</ul>
+	</article>
+	<article id='search'>
+		<div>
+			<a>제목+내용</a>
+			<a class='on'>제목</a>
+			<a>내용</a>
+			<input type='text' placeholder='검색어를 입력하세요'>
+			<input type='button' value='검색' 
+			onclick='popup("block")'>
+		</div>
+	</article>
+	<article id='tb-list'>
+		<ul>
+			<li>전체 433건</li>
+			<li>
+				<a>최신 순</a>
+				<a>댓글 많은 순</a>
+				<a>좋아요 많은 순</a>
+				<a>조회 순</a>
+			</li>
+		</ul>
+		<table>
+			<colgroup>
+				<col width='80px'>
+				<col>
+				<col width='100px'>
+				<col width='80px'>
+				<col width='80px'>
+				<col width='120px'>
+			</colgroup>
+			<thead>
+				<tr><th>No.</th>
+					<th>제목</th>
+					<th>등록자</th>
+					<th>조회수</th>
+					<th>좋아요</th>
+					<th>등록일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td>1</td>
+					<td>ERR_CONNECTION_TIMED_OUT 오류 python에서 requests를 반복 요청할 때 생기는 문제 해결을 도움 받고 싶습니다.</td>
+					<td>조규*</td>
+					<td>100</td>
+					<td>0</td>
+					<td>2022-03-05</td>
+				</tr>
+				<tr><td>1</td>
+					<td>ERR_CONNECTION_TIMED_OUT 오류 python에서 requests를 반복 요청할 때 생기는 문제 해결을 도움 받고 싶습니다.</td>
+					<td>조규*</td>
+					<td>100</td>
+					<td>0</td>
+					<td>2022-03-05</td>
+				</tr>
+				<tr><td>1</td>
+					<td><a href=''>ERR_CONNECTION_TIMED_OUT 오류 python에서 requests를 반복 요청할 때 생기는 문제 해결을 도움 받고 싶습니다.</a></td>
+					<td>조규*</td>
+					<td>100</td>
+					<td>0</td>
+					<td>2022-03-05</td>
+				</tr>
+				<tr><td>1</td>
+					<td>ERR_CONNECTION_TIMED_OUT 오류 python에서 requests를 반복 요청할 때 생기는 문제 해결을 도움 받고 싶습니다.</td>
+					<td>조규*</td>
+					<td>100</td>
+					<td>0</td>
+					<td>2022-03-05</td>
+				</tr>
+			</tbody>
+		</table>
+	</article>
+	<div id='paging'>
+		<a class='arrow'><i class="fa-solid fa-angles-left"></i></a>
+		<a class='arrow'><i class="fa-solid fa-angle-left"></i></a>
+		<a>1</a>
+		<a>2</a>
+		<a>3</a>
+		<a>4</a>
+		<a>5</a>
+		<a class='on'>6</a>
+		<a>7</a>
+		<a>8</a>
+		<a>9</a>
+		<a>10</a>
+		<a class='arrow'><i class="fa-solid fa-angle-right"></i></a>
+		<a class='arrow'><i class="fa-solid fa-angles-right"></i></a>
+	</div>
+</section>
+<aside>
+	<div>
+		<ul>
+			<li><a href=''>이용약관</a></li>
+			<li><a href=''>개인정보처리방침</a></li>
+			<li><a href=''>공공데이터포털 소개</a></li>
+			<li><a href=''>분쟁조정신청</a></li>
+			<li>개인정보분야별책임자 : 최시복</li>
+		</ul>
+	</div>
+</aside>
+<footer>
+	<div>
+		<address>(30116) 세종특별자치시 한누리대로 411(어진동, 행정안전부 별관)대표번호 : 1566-0025문의시간 : 09:00~18:00 (월~금)</address>
+		<p>ⓒ행정안전부. All rights reserved</p>
+	</div>
+</footer>
+<div id='popup-background'></div>
+<div id='popup'>
+	<div><img src='../images/bee.webp'></div>
+	<a href='javascript:popup("none")'>닫기</a>
+<!-- 	<a onclick='popup("none")'>닫기</a> -->
+</div>
+<script>
+function popup( value ){
+	document.getElementById('popup').style.display = value;
+	document.getElementById('popup-background')
+									.style.display = value;
+}
+
+/*
+function popup_close(){
+	document.getElementById('popup').style.display = 'none';
+	document.getElementById('popup-background')
+									.style.display = 'none';
+}
+function popup(){
+	document.getElementById('popup').style.display = 'block';
+	document.getElementById('popup-background')
+									.style.display = 'block';
+}
+*/
+</script>
+</body>
+</html>
+
+
+
+
+

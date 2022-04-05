@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.box { width:100px; height:100px; margin:50px; }
+.box1 { background-color: red; }
+.box2 { background-color: blue; }
+.box1:hover { 
+	transform: rotate(30deg);
+	transform-origin: right top; /* 회전의 기준 지정*/ 
+}
+.box2:active {
+	transform: translate(300px, 100px);  /* x축, y축 이동거리 지정*/
+}
+
+.box3 {
+	width:100px; height:100px; background-color: green;
+	position: fixed; left: 0; top: 0;
+	top: 50%;
+	left: 50%;
+  	transform: translate(-50%, -50%); 
+	/* 
+	화면 가운데로 이동 하려면
+	 top, left를 50% 를 주되 
+	 박스영역 크기의 중심을 기준으로 
+	 50%만큼 위, 왼쪽으로 이동시켜줘야만 한다
+	 */
+}
+
+body{ margin: 0 }
+
+#outer {
+	width: 600px;
+	height:400px;
+	border: 1px solid;
+	position: relative;
+	margin: 50px; 
+}
+
+#inner {
+	width: 100px; height: 100px;
+	background-color: orange;
+	position: absolute;
+	top:50%; left: 50%;
+	transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+<!-- 변형(transform) 
+ 텍스트나 이미지 등을 움직이게 하기 위해  transform 을 적용한다
+-->
+<div class='box box1'></div>
+<div class='box box2'></div>
+<div class='box3'></div>
+
+<div id='outer'>
+	<div id='inner'></div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

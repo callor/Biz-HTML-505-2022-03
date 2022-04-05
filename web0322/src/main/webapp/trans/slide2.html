@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel='stylesheet' href='css/slide.css'>
+<style>
+#transform .slide {
+	transition-property: transform;
+	transition-duration: 16s;
+	transition-delay: 2s; 
+/* 	transition-timing-function: linear;  */
+ 	transition-timing-function: steps(4, start);  
+}
+#transform .slide:hover {
+	transform: translateX(-1280px);
+}
+
+#transform2 .slide-wrap { width:980px; }
+#transform2 .slide{
+/*  property name | duration | timing-function | delay */
+	transition: transform 9s steps(3,start) 2s;
+}
+#transform2 .slide:hover {
+	transform: translateX(-960px); 
+}
+
+</style>
+</head>
+<body>
+<div id='transform'>
+	<div class='slide-wrap'>
+		<div class='slide'>
+			<ul>
+				<li><img src='../images/bee.webp'></li>
+				<li><img src='../images/blue.webp'></li>
+				<li><img src='../images/calf.webp'></li>
+				<li><img src='../images/cat.webp'></li>
+				<li><img src='../images/forest.jpg'></li>
+				<li><img src='../images/sakura.webp'></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id='transform2'>
+	<div class='slide-wrap'>
+		<div class='slide'>
+			<ul>
+				<li><img src='../images/bee.webp'></li>
+				<li><img src='../images/blue.webp'></li>
+				<li><img src='../images/calf.webp'></li>
+				<li><img src='../images/cat.webp'></li>
+				<li><img src='../images/forest.jpg'></li>
+				<li><img src='../images/sakura.webp'></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
