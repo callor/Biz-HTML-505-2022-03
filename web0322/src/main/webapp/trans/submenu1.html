@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+ul { margin:0; padding:0; list-style: none; }
+#menu > li { float: left; }
+#menu > li:not(:first-child) { margin-left: 100px; }
+#menu .submenu {
+	position: absolute; width: 150px;
+	transform-origin: top; transform:scaleY(0);
+	transition: 0.3s;
+	background-color: #eee; border: 1px solid #ddd;
+	padding:15px;	
+}
+#menu .menu:hover + .submenu {
+	transform:scaleY(1);	
+}
+</style>
+</head>
+<body>
+<ul id='menu'>
+	<li><a class='menu'>메뉴1</a>
+		<ul class='submenu'>
+			<li><a>메뉴1 서브메뉴1</a></li>
+			<li><a>메뉴1 서브메뉴2</a></li>
+			<li><a>메뉴1 서브메뉴3</a></li>
+		</ul>
+	</li>
+	<li><a class='menu'>메뉴2</a>
+		<ul class='submenu'>
+			<li><a>메뉴2 서브메뉴1</a></li>
+			<li><a>메뉴3 서브메뉴2</a></li>
+			<li><a>메뉴3 서브메뉴3</a></li>
+			<li><a>메뉴3 서브메뉴4</a></li>
+		</ul>
+	</li>
+	<li><a class='menu'>메뉴3</a></li>
+	<li><a class='menu'>메뉴4</a>
+		<ul class='submenu'>
+			<li><a>메뉴4 서브메뉴1</a></li>
+			<li><a>메뉴4 서브메뉴2</a></li>
+		</ul>
+	</li>
+	<li><a class='menu'>메뉴5</a></li>
+</ul>
+
+</body>
+</html>

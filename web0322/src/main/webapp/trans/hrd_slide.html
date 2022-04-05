@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#k-digital { width:1240px; margin: 100px auto } /*  400 * 3 + 20*2 */
+.slide-wrap {
+	width:1240px;	height: 170px; 
+	position: relative;
+	overflow: hidden;
+} 
+.slide ul { list-style: none; margin:0; padding: 0 }
+.slide ul li { float:left; box-sizing:border-box;
+	background-color: #e6eeff;
+}
+.slide li:not(:last-child) {  margin-right: 20px }
+.slide { position:absolute; width:2500px; height:170px }
+.training { width: 400px; height: 170px; 
+	border: 1px solid #ddd; }
+.training div { margin: 15px }	
+.training img { float: left; }
+.training strong { line-height:48px; margin-left: 10px; }
+.training p { font-size:15px; }
+#k-digital .slide {
+	animation: k-digital 9s steps(3, start) 3s infinite;
+}
+@keyframes k-digital {
+	from { left:0px; } to { left: -1260px; }
+}
+
+</style>
+</head>
+<body>
+<div id='k-digital'>
+	<div class='slide-wrap'>
+		<div class='slide'>
+			<ul>
+				<li class='training'>
+					<div><img src='../images/k1.png'><strong>인공지능</strong>
+						<p>인공지능컴퓨터가 인간의 지적 업무를 대행하게 할 수 있는, 알고리즘, 프로그램, 시스템 개발 및 응용서비스에 관련된 분야</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src='../images/k2.png'><strong>스마트 제조</strong>
+						<p>스마트 제조가상물리 시스템을 기반으로 로봇 IoT, 인공지능 등 신기술을 활용하여 제조공정을 고도화하는 기술 및 시스템의 개발, 구축, 운용에 관련된 분야</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src='../images/k3.png'><strong>사물 인터넷</strong>
+						<p>사물 인터넷센서, 통신과 컴퓨팅 기능을 갖춘 단말 장치를 활용하기 위한 기반 기술 및 장비, S/W, 시스템 개발과 응용서비스에 관련된 분야</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src='../images/k4.png'><strong>인공지능</strong>
+						<p>무인이동체컴퓨터와 통신을 통해 자율적으로 운행 가능한 이동기기의 기술 및 시스템, 응용 서비스의 개발과 구축에 관련된 분야</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src='../images/k5.png'><strong>스마트팜</strong>
+						<p>기타스마트팜, 스마트시티, 5G, 블록체인, 로보틱스, 첨단소재 등 기타 신기술 및 융·복합분야</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src='../images/k6.png'><strong>빅데이터</strong>
+						<p>빅데이터특정 목적을 위한 정형/비정형 데이터의 생성, 수집, 축적, 정제, 분석, 시각화에 필요한 기술 및 시스템, S/W 개발과 응용서비스에 관련된 분야</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

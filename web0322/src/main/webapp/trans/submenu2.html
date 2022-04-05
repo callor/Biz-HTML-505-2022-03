@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body { margin:0; }
+ul { margin:0; padding:0; list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+header { min-width: 1200px; border-bottom: 1px solid #aaa; }
+header nav { width:1200px;  margin:0 auto; }
+header nav > ul { display: inline-block; margin: 30px 0; }
+
+#category > li { float: left; }
+#category > li:not(:first-child) { margin-left: 100px }
+#category .submenu {
+	position: absolute;
+	left: 0; top: 86px; width: 100%; min-width: 1200px;
+	background-color: #f5f6ff;
+	border-bottom: 1px solid #ddd;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: 0.3s; 
+	box-shadow: 0 4px 4px 2px #eee; 
+}
+#category .menu:hover + .submenu {
+	transform: scaleY(1);
+}
+
+#category .submenu ul {
+	width: 200px; margin:20px 0px; display: inline-block;
+}
+#category .submenu li:not(:first-child) { margin-top: 10px; }
+
+
+</style>
+</head>
+<body>
+<header>
+	<nav>
+		<ul id='category'>
+			<li><a class='menu'>카테고리1</a>
+				<div class='submenu'>
+					<nav>
+					<ul>
+						<li><a>카테고리1의 서브1 메뉴1</a></li>
+						<li><a>카테고리1의 서브1 메뉴2</a></li>
+						<li><a>카테고리1의 서브1 메뉴3</a></li>
+						<li><a>카테고리1의 서브1 메뉴4</a></li>
+					</ul>
+					<ul>
+						<li><a>카테고리1의 서브2 메뉴1</a></li>
+						<li><a>카테고리1의 서브2 메뉴2</a></li>
+						<li><a>카테고리1의 서브2 메뉴3</a></li>
+					</ul>
+					</nav>
+				</div>		
+			</li>		
+			<li><a class='menu'>카테고리2</a>
+				<div class='submenu'>
+					<nav>
+					<ul>
+						<li><a>카테고리2의 서브1 메뉴1</a></li>
+						<li><a>카테고리2의 서브1 메뉴2</a></li>
+						<li><a>카테고리2의 서브1 메뉴3</a></li>
+					</ul>
+					<ul>
+						<li><a>카테고리2의 서브2 메뉴1</a></li>
+						<li><a>카테고리2의 서브2 메뉴2</a></li>
+						<li><a>카테고리2의 서브2 메뉴3</a></li>
+						<li><a>카테고리2의 서브2 메뉴4</a></li>
+					</ul>
+					<ul>
+						<li><a>카테고리2의 서브3 메뉴1</a></li>
+						<li><a>카테고리2의 서브3 메뉴2</a></li>
+						<li><a>카테고리2의 서브3 메뉴3</a></li>
+						<li><a>카테고리2의 서브3 메뉴4</a></li>
+					</ul>
+					</nav>
+				</div>		
+			</li>
+			<li><a class='menu'>카테고리3</a></li>		
+			<li><a class='menu'>카테고리4</a></li>		
+			<li><a class='menu'>카테고리5</a>
+				<div class='submenu'>
+					<nav>
+					<ul>
+						<li><a>카테고리5의 서브1 메뉴1</a></li>
+						<li><a>카테고리5의 서브1 메뉴2</a></li>
+						<li><a>카테고리5의 서브1 메뉴3</a></li>
+					</ul>
+					<ul>
+						<li><a>카테고리5의 서브2 메뉴1</a></li>
+						<li><a>카테고리5의 서브2 메뉴2</a></li>
+						<li><a>카테고리5의 서브2 메뉴3</a></li>
+					</ul>
+					</nav>
+				</div>		
+			</li>
+		</ul>
+	</nav>
+</header>
+
+</body>
+</html>
