@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' 
+		content='width=device-width, initial-scale=1'>
+<title>Insert title here</title>
+<style>
+body { margin:0 }
+ul { margin: 0; padding: 0; list-style: none; }
+
+header, section, footer { margin: 0 auto; padding: 0 50px; }
+header { font-size: 18px; font-weight: bold; 
+	border-bottom: 1px solid #ccc;
+}
+header ul { margin: 30px 0 20px; display: inline-block; }
+header li { float: left; padding-bottom: 10px; }
+header li:not(:last-child) { margin-right: 50px; }
+header li.on { border-bottom: 3px solid red;  color: red; }
+
+#tb-list table { 
+	border-collapse: collapse; width: 100%; text-align: center; }
+#tb-list table thead tr { 
+	background-color: #ccc; border-top: 2px solid #666;
+}		
+#tb-list td, #tb-list th { padding: 15px 0; }  
+#tb-list tbody tr { border-top: 1px solid #aaa; }
+#tb-list tbody tr:last-child { border-bottom: 1px solid #aaa; }
+#tb-list tbody td:nth-child(2) { 
+	text-align: left; font-weight: bold; 
+}
+#tb-list tbody td:nth-child(2):hover {
+	text-decoration: underline; color: blue; cursor: pointer;
+}
+
+
+@media screen and (max-width:1023px) {
+	header, section, footer { padding: 0 20px; }
+}
+@media screen and (min-width:414px) and (max-width:1023px) {
+	article table { width: 950px; }
+} 
+@media screen and (max-width:767px){
+	header ul li { width: 100%; }
+}
+@media screen and (max-width:414px){
+ 	article#tb-list table colgroup,  article#tb-list table thead, 
+ 	article#tb-list table tbody td:first-child
+ 	{ display:none; }
+ 	 
+ 	article table tbody tr:first-child { 
+ 		border-top: 2px solid #666 }
+ 	article#tb-list table tbody td { 
+ 		display:block; text-align: left; 
+ 		padding: 5px 0 0; 
+	}
+ 	article#tb-list table tbody td:last-child {
+ 		padding-bottom: 5px; 
+ 	}
+}
+
+footer {
+	font-size: 14px;  height: 100px; margin-top: 50px;
+}
+footer * { margin: 0 0 5px;}
+address { font:inherit;}
+</style>
+</head>
+<body>
+<!--  
+미디어쿼리: 디바이스 크기에 맞춰 스타일을 각각 지정해서 화면을 다르게 표현하는 방식
+모든 디바이스 all,  컴퓨터화면(스마트폰 화면) screen, 인쇄관련 print
+연산자 and, or - media screen and print 
+               media screen and (min-width:768px)
+width, height  media screen and (min-width:768px) 
+							and (min-height:480px)
+-->
+<header>
+	<nav>
+		<ul>
+			<li>데이터찾기</li>
+			<li>국가데이터맵</li>
+			<li>데이터활용</li>
+			<li class='on'>정보공유</li>
+		</ul>
+	</nav>
+</header>
+<section>
+	<article id='tb-list'>
+		<h3>정보공유</h3>
+		<table>
+			<colgroup>
+				<col width="70px">
+				<col>
+				<col width="100px">
+				<col width="70px">
+				<col width="70px">
+				<col width="120px">
+			</colgroup>
+			<thead>
+				<tr><th>No.</th>
+					<th>제목</th>
+					<th>등록자</th>
+					<th>조회수</th>
+					<th>좋아요</th>
+					<th>등록일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td>1</td>
+					<td>삼성전자 의료기기사업 구조조정설 ‘진땀’…무슨 일?</td>
+					<td>홍길동</td>
+					<td>10</td>
+					<td>1</td>
+					<td>2022-04-06</td>
+				</tr>
+				<tr><td>2</td>
+					<td>삼성전자 의료기기사업 구조조정설 ‘진땀’…무슨 일?</td>
+					<td>홍길동</td>
+					<td>10</td>
+					<td>1</td>
+					<td>2022-04-06</td>
+				</tr>
+				<tr><td>3</td>
+					<td>삼성전자 의료기기사업 구조조정설 ‘진땀’…무슨 일?</td>
+					<td>홍길동</td>
+					<td>10</td>
+					<td>1</td>
+					<td>2022-04-06</td>
+				</tr>
+				<tr><td>4</td>
+					<td>삼성전자 의료기기사업 구조조정설 ‘진땀’…무슨 일?</td>
+					<td>홍길동</td>
+					<td>10</td>
+					<td>1</td>
+					<td>2022-04-06</td>
+				</tr>
+			</tbody>
+		</table>
+	</article>
+</section>
+<footer>
+	<div>
+		<address>광주광역시 북구 중흥동 한국경영원 빌딩 5층 505호</address>
+		<p>한국경영원, All rights reserved</p>
+	</div>
+</footer>
+
+</body>
+</html>

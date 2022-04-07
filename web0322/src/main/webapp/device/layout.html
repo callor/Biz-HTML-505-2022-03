@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' 
+	content='width=device-width, initial-scale=1' >
+<title>Insert title here</title>
+<style>
+body { margin:0 auto; }
+#wrap { margin:0 auto; width: 100%; }
+header {
+	width: 100%;  height:100px; line-height:100px;
+	background-color: blue;
+}
+header h1 { text-align: center; }
+section {
+	width: 65%; height: 600px;
+	background-color: yellow; float: left;
+}
+aside {
+	width: 35%; height: 600px;
+	background-color: green; float: right;
+}
+footer {
+	clear: both; width: 100%; height: 100px;
+	background-color: purple; line-height: 100px;
+	text-align: center;
+}
+
+img { max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- 
+뷰포트: 디바이스의 디스플레이 화면에 맞춰 확대/축소해서 표시되는 화면형태
+<meta  name='viewport' 
+		content='width=device-width, initial-scale=1' >
+-->
+<div id='wrap'>
+	<header><h1>레이아웃</h1>	</header>
+	<section><h3>본문</h3>
+		<img src='../images/bee.webp'>
+	</section>
+	<aside>사이드영역</aside>
+	<footer>푸터</footer>
+</div>
+
+
+ 
+ 
+</body>
+</html>

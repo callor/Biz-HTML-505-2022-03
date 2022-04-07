@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#top>* {
+	margin: 50px auto;
+}
+
+#middle ul li {
+	list-style: none;
+}
+
+#middle ul {
+	margin: 0;
+	padding: 0;
+}
+
+#middle {
+	width: 1200px;
+}
+
+#middle>ul>li>a {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#middle>ul>li {
+	float: left;
+	line-height: 50px;
+}
+
+.all:hover+.border {
+transform: scaleY(1);
+	cursor: pointer;
+}
+
+#middle>ul>li:not(:first-child) {
+	margin-left: 30px;
+}
+
+.bottom li {
+/* 	transform: scaleY(0); */
+	overflow: hidden;
+	/* position: absolute; */
+}
+
+.bottom {
+	float: left;
+}
+
+img {
+	margin-right: 100px;
+}
+
+#next {
+	width: 1200px;
+	height: 500px;
+	min-width: 1200px;
+	background-color: #b5c9eb;
+	clear: left;
+	position: relative;
+	margin: 0 auto;
+	z-index:1;
+}
+
+#next img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+
+.border {
+	position: absolute;
+	width: 100%;
+	top: 115px;
+	left: 0;
+	z-index:2;
+		transform: scaleY(0);
+	transform-origin: top;
+	transition: 0.3s;
+	
+}
+</style>
+</head>
+<body>
+
+	<div id='top'>
+		<div id='middle'>
+			<ul>
+				<li><img src='../images/whale.png'></li>
+				<li><a class='all'>훈련과정</a>
+					<div class='border'>
+						<ul class='bottom'>
+							<li>국민내일배움카드</li>
+							<li>국민내일배움카드</li>
+							<li>국민내일배움카드</li>
+						</ul>
+						<ul class='bottom'>
+							<li>기업훈련과정</li>
+							<li>기업훈련과정</li>
+							<li>기업훈련과정</li>
+						</ul>
+						<ul class='bottom'>
+							<li>step이러닝</li>
+							<li>step이러닝</li>
+						</ul>
+					</div></li>
+				<li><a>지원제도</a></li>
+				<li><a>일자리.직업정보</a></li>
+				<li><a>지식정보센터</a></li>
+				<li><a>k-디지털 아카데미</a></li>
+			</ul>
+		</div>
+		<div id='next'>
+			<img src='../images/hrd.png'>
+		</div>
+
+	</div>
+</body>
+</html>
